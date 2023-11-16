@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/teq-quocbang/message-brocker/state";
+
+enum State  {
+  ORDER = 0;
+  PREPARING = 1;
+  DELIVERY = 2;
+  COMPLETE  = 3;
+}
