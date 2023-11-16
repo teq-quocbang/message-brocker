@@ -1,0 +1,11 @@
+version: "3"
+services:
+  rabbitmd:
+    container_name: rabbitmd
+    image: rabbitmq:latest
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: $RABBITMQ_USERNAME  # Set your desired username
+      RABBITMQ_DEFAULT_PASS: $RABBITMQ_PASSOWRD  # Set your desired password
+    ports:
+      - ${RABBITMQ_PORT}:5672
